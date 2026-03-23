@@ -1,0 +1,10 @@
+# @package _global_
+defaults:
+    - planar
+
+general:
+    name: 'planar_extrapolation'
+    samples_to_save: 0
+    chains_to_save: 0
+    final_model_samples_to_save: 0
+    final_model_chains_to_save: 0

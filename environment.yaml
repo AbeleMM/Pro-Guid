@@ -1,0 +1,11 @@
+name: defog
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - graph-tool=2.88
+  - psi4=1.9.1
+  - pip
+  - pip:
+      - -r requirements.txt
+      - -r postreqs.txt

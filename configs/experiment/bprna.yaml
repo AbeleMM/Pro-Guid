@@ -1,0 +1,33 @@
+# @package _global_
+general:
+    name : 'bprna'
+    gpus : 1
+    wandb: 'online'
+    resume: null            # If resume, path to ckpt file from outputs directory in main directory
+    test_only: null
+    check_val_every_n_epochs: 2000  # TODO: to adapt
+    sample_every_val: 1  # TODO: to adapt
+    samples_to_generate: 200  # 1305 for validation set
+    samples_to_save: 9
+    chains_to_save: 1
+    final_model_samples_to_generate: 1300
+    final_model_samples_to_save: 30
+    final_model_chains_to_save: 20
+train:
+    n_epochs: 100000  # TODO: to adapt
+    batch_size: 4  # TODO: to adapt
+    save_model: True
+    time_distortion: 'polydec'  # 'polydec' or 'none', training acceleration on large datasets
+sample:
+    time_distortion: 'polydec'
+    omega: 0.
+    eta: 0
+    sample_steps: 1000
+model:
+    n_layers: 10
+    # Do not set hidden_mlp_E, dim_ffE too high, computing large tensors on the edges is costly
+    # At the moment (03/08), y contains quite little information
+    hidden_mlp_dims: { 'X': 128, 'E': 32, 'y': 256 }
+
+    # The dimensions should satisfy dx % n_head == 0
+    hidden_dims: { 'dx': 128, 'de': 32, 'dy': 256, 'n_head': 8, 'dim_ffX': 128, 'dim_ffE': 32, 'dim_ffy': 256 }

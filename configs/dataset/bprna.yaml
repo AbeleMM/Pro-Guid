@@ -1,0 +1,3 @@
+name: 'bprna'            # qm9, qm9_positional
+remove_h: null
+datadir: 'data/bpRNA/'

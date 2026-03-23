@@ -1,0 +1,9 @@
+# @package _global_
+defaults:
+    - sbm
+
+general:
+    name: 'chordal'
+
+control:
+    condition: 'chordal'
