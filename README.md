@@ -1,6 +1,4 @@
-# Pro-Guid: Test-time Graph Extrapolation via Progressive Anchor-Guided Expansion
-
-Code for ["Test-time Graph Extrapolation via Progressive Anchor-Guided Expansion"](https://openreview.net/forum?id=YKyvRqhUWU) workshop paper.
+# Pro-Guid
 
 Codebase is based on [DeFoG](https://github.com/manuelmlmadeira/DeFoG), which serves as the backbone model for the test-time extrapolation task.
 
